@@ -11,20 +11,21 @@ Color Options: The player selects a color from six options that include the targ
 Score Tracking: Players earn 10 points for a correct guess and lose 10 points for an incorrect guess. The score is updated in real time.
 Visual Feedback: Correct guesses display a green message and play a winning sound. Incorrect guesses display a red message and play a losing sound.
 Responsive Design: The game adapts to different screen sizes, making it accessible on mobile and desktop devices.
+
 How to Play:
 Look at the color displayed in the box.
 Choose the color that matches the box from the options.
 If you guess correctly, your score increases. If you're wrong, your score decreases.
 A new game automatically starts after each guess.
 You can click the Restart Game button to start fresh.
+
 Technologies Used:
 HTML: Provides the basic structure of the game.
 CSS: Styles the game elements and manages animations.
 JavaScript: Handles the game logic, score updates, color generation, and event handling.
+
 Installation:
 Clone the repository:
-bash
-Copy
-Edit
-git clone https://github.com/your-username/color-guessing-game.git
+
+git clone https://github.com/praiz-y/hngx-stage1-ColorGuessing.git
 Open index.html in your browser to start playing the game.
