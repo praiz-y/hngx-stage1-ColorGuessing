@@ -38,9 +38,12 @@ function showOptions() {
 function generateGame() {
   const targetColor = colors[Math.floor(Math.random() * colors.length)];
   colorBox.style.backgroundColor = targetColor;
-  const shuffledColors = [...colors].sort(() => Math.random() - 0.5);
-  const randomIndex = Math.floor(Math.random() * colorOptions.length);
+
+  let shuffledColors = [...colors].sort(() => Math.random() - 0.5);
+
+  let randomIndex = Math.floor(Math.random() * colorOptions.length);
   colorOptions[randomIndex].style.backgroundColor = targetColor;
+
   let colorIndex = 0;
   colorOptions.forEach((button, index) => {
     if (index !== randomIndex) {
@@ -68,7 +71,10 @@ function checkGuess(guessedColor, targetColor) {
     lossSound.play();
   }
   scoreDisplay.textContent = score;
-  generateGame();
+  
+  setTimeout(() => {
+    generateGame();
+  }, 1000); 
 }
 
 restartButton.addEventListener('click', () => {
