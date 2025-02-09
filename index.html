@@ -7,27 +7,35 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Guess the Color Game</h1>
+  <h1 data-testid="gameTitle">Guess the Color Game</h1>
+  
   <div>
-    <h2>Guess the color displayed in the box below!</h2>
-    <p>When the color box disappears, select the color that you saw from the options.</p>
+    <h2 data-testid="gameInstructions">Guess the color displayed in the box below!</h2>
+    <p data-testid="gameInstructionsDetails">When the color box disappears, select the color that you saw from the options.</p>
   </div>
-  <div class="color-box" id="colorBox"></div>
-  <div class="color-options">
-    <button class="color-option" id="colorOption1" aria-label="Color Option 1"></button>
-    <button class="color-option" id="colorOption2" aria-label="Color Option 2"></button>
-    <button class="color-option" id="colorOption3" aria-label="Color Option 3"></button>
-    <button class="color-option" id="colorOption4" aria-label="Color Option 4"></button>
-    <button class="color-option" id="colorOption5" aria-label="Color Option 5"></button>
-    <button class="color-option" id="colorOption6" aria-label="Color Option 6"></button>
+  
+  <div class="color-box" id="colorBox" data-testid="colorBox"></div>
+  
+  <div class="color-options" data-testid="colorOptions">
+    <button class="color-option" id="colorOption1" data-testid="colorOption" aria-label="Color Option 1"></button>
+    <button class="color-option" id="colorOption2" data-testid="colorOption" aria-label="Color Option 2"></button>
+    <button class="color-option" id="colorOption3" data-testid="colorOption" aria-label="Color Option 3"></button>
+    <button class="color-option" id="colorOption4" data-testid="colorOption" aria-label="Color Option 4"></button>
+    <button class="color-option" id="colorOption5" data-testid="colorOption" aria-label="Color Option 5"></button>
+    <button class="color-option" id="colorOption6" data-testid="colorOption" aria-label="Color Option 6"></button>
   </div>
-  <p id="feedback"></p>
+  
+  <p id="feedback" data-testid="gameStatus"></p>
+  
   <div>
-    <p>Score: <span id="score">0</span></p>
+    <p>Score: <span id="score" data-testid="score">0</span></p>
   </div>
-  <button id="restartButton">Restart Game</button>
-  <audio id="winSound" src="Win.wav"></audio>
-  <audio id="lossSound" src="Lose.wav"></audio>
+  
+  <button id="restartButton" data-testid="newGameButton">Restart Game</button>
+  
+  <audio id="winSound" src="Win.wav" data-testid="winSound"></audio>
+  <audio id="lossSound" src="Lose.wav" data-testid="lossSound"></audio>
+  
   <script src="script.js"></script>
 </body>
 </html>
